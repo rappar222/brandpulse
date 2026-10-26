@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 1080" width="1440" height="1080" style="background:#090d16; font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
+  <defs>
+    <!-- Background Grid Pattern -->
+    <pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse">
+      <path d="M 30 0 L 0 0 0 30" fill="none" stroke="rgba(255, 255, 255, 0.03)" stroke-width="1"/>
+    </pattern>
+
+    <!-- Gradients -->
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0a101d"/>
+      <stop offset="100%" stop-color="#060911"/>
+    </linearGradient>
+
+    <linearGradient id="brandGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#818cf8"/>
+      <stop offset="50%" stop-color="#6366f1"/>
+      <stop offset="100%" stop-color="#06b6d4"/>
+    </linearGradient>
+
+    <linearGradient id="blueCard" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="rgba(30, 41, 59, 0.85)"/>
+      <stop offset="100%" stop-color="rgba(15, 23, 42, 0.85)"/>
+    </linearGradient>
+
+    <!-- Arrow Markers -->
+    <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#6366f1"/>
+    </marker>
+    <marker id="arrowCyan" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#06b6d4"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1440" height="1080" fill="url(#bgGrad)"/>
+  <rect width="1440" height="1080" fill="url(#grid)"/>
+
+  <!-- ==================== HEADER SECTION ==================== -->
+  <g transform="translate(60, 36)">
+    <!-- Brand Icon -->
+    <rect width="48" height="48" rx="14" fill="url(#brandGrad)"/>
+    <path d="M26 12 L18 26 L24 26 L22 36 L30 22 L24 22 Z" fill="#ffffff"/>
+
+    <text x="64" y="28" fill="#ffffff" font-size="24" font-weight="900" letter-spacing="-0.5">BrandPulse Full System Architecture</text>
+    <text x="64" y="47" fill="#94a3b8" font-size="12.5" font-weight="500">Real-time Concurrent Availability Checker • Trademark Legal Collision Intelligence • Multilingual Marketing AI Engine</text>
+
+    <!-- Tech Badges -->
+    <g transform="translate(850, 8)">
+      <rect x="0" y="0" width="80" height="26" rx="8" fill="rgba(99, 102, 241, 0.15)" stroke="rgba(99, 102, 241, 0.4)" stroke-width="1"/>
+      <text x="40" y="17" fill="#a5b4fc" font-size="10.5" font-weight="700" text-anchor="middle">Next.js 14</text>
+
+      <rect x="88" y="0" width="84" height="26" rx="8" fill="rgba(6, 182, 212, 0.15)" stroke="rgba(6, 182, 212, 0.4)" stroke-width="1"/>
+      <text x="130" y="17" fill="#67e8f9" font-size="10.5" font-weight="700" text-anchor="middle">TypeScript</text>
+
+      <rect x="180" y="0" width="102" height="26" rx="8" fill="rgba(16, 185, 129, 0.15)" stroke="rgba(16, 185, 129, 0.4)" stroke-width="1"/>
+      <text x="231" y="17" fill="#6ee7b7" font-size="10.5" font-weight="700" text-anchor="middle">Cloudflare DoH</text>
+
+      <rect x="290" y="0" width="94" height="26" rx="8" fill="rgba(245, 158, 11, 0.15)" stroke="rgba(245, 158, 11, 0.4)" stroke-width="1"/>
+      <text x="337" y="17" fill="#fcd34d" font-size="10.5" font-weight="700" text-anchor="middle">Legal TM Intel</text>
+
+      <rect x="392" y="0" width="78" height="26" rx="8" fill="rgba(244, 63, 94, 0.15)" stroke="rgba(244, 63, 94, 0.4)" stroke-width="1"/>
+      <text x="431" y="17" fill="#fda4af" font-size="10.5" font-weight="700" text-anchor="middle">Launch AI</text>
+    </g>
+  </g>
+
+  <!-- ==================== TIER 1: CLIENT PRESENTATION LAYER ==================== -->
+  <g transform="translate(60, 105)">
+    <!-- Section Box -->
+    <rect width="1320" height="230" rx="20" fill="url(#blueCard)" stroke="#1e293b" stroke-width="2"/>
+    <rect x="20" y="-12" width="260" height="24" rx="6" fill="#1e293b"/>
+    <text x="30" y="4" fill="#a5b4fc" font-size="11" font-weight="800" letter-spacing="1">1. CLIENT LAYER (APP ROUTER &amp; UI)</text>
+
+    <!-- Component 1: Search & Debounce Engine -->
+    <g transform="translate(20, 25)">
+      <rect width="305" height="180" rx="14" fill="#0f172a" stroke="#334155" stroke-width="1.5"/>
+      <text x="16" y="26" fill="#f8fafc" font-size="13" font-weight="700">SearchBar &amp; Query State</text>
+      <text x="16" y="42" fill="#64748b" font-size="11">Input Sanitization &amp; History</text>
+      <path d="M 16 52 L 289 52" stroke="#1e293b" stroke-width="1"/>
+      <text x="16" y="72" fill="#cbd5e1" font-size="10.5">• 500ms debounced reactive search</text>
+      <text x="16" y="90" fill="#cbd5e1" font-size="10.5">• Clean brand extraction (.xyz, .ro, @)</text>
+      <text x="16" y="108" fill="#cbd5e1" font-size="10.5">• URL History Sync (?q={name})</text>
+      <text x="16" y="126" fill="#cbd5e1" font-size="10.5">• LocalStorage history &amp; shortlist</text>
+      <text x="16" y="144" fill="#cbd5e1" font-size="10.5">• Pre-verified startup hacks (get-, -hq)</text>
+      <text x="16" y="162" fill="#38bdf8" font-size="10">Instant Enter or button execution</text>
+    </g>
+
+    <!-- Component 2: Persona Mode & Toolbar -->
+    <g transform="translate(345, 25)">
+      <rect width="305" height="180" rx="14" fill="#0f172a" stroke="#334155" stroke-width="1.5"/>
+      <text x="16" y="26" fill="#f8fafc" font-size="13" font-weight="700">Persona Bar &amp; Dossier Suite</text>
+      <text x="16" y="42" fill="#64748b" font-size="11">Startup / DevTool Filtering</text>
+      <path d="M 16 52 L 289 52" stroke="#1e293b" stroke-width="1"/>
+      <text x="16" y="72" fill="#cbd5e1" font-size="10.5">• Startup Mode (SaaS/app/social focus)</text>
+      <text x="16" y="90" fill="#cbd5e1" font-size="10.5">• DevTool Mode (npm, pypi, crates, git)</text>
+      <text x="16" y="108" fill="#cbd5e1" font-size="10.5">• Claim Checklist Modal (31 platforms)</text>
+      <text x="16" y="126" fill="#cbd5e1" font-size="10.5">• PDF Brand Dossier print export</text>
+      <text x="16" y="144" fill="#cbd5e1" font-size="10.5">• CSV export &amp; Clipboard summary</text>
+      <text x="16" y="162" fill="#34d399" font-size="10">Shortlist comparison drawer</text>
+    </g>
+
+    <!-- Component 3: Discovered Site & Live Synthesizer Box -->
+    <g transform="translate(670, 25)">
+      <rect width="305" height="180" rx="14" fill="#0f172a" stroke="#334155" stroke-width="1.5"/>
+      <text x="16" y="26" fill="#f8fafc" font-size="13" font-weight="700">Live Web &amp; TLD Synthesizer</text>
+      <text x="16" y="42" fill="#64748b" font-size="11">Discovered Active Sites Bar</text>
+      <path d="M 16 52 L 289 52" stroke="#1e293b" stroke-width="1"/>
+      <text x="16" y="72" fill="#cbd5e1" font-size="10.5">• Multi-site chip selector (.com, .ro, .xyz)</text>
+      <text x="16" y="90" fill="#cbd5e1" font-size="10.5">• Parked vs authentic site badges</text>
+      <text x="16" y="108" fill="#cbd5e1" font-size="10.5">• Deep Romanian SRL &amp; CUI detection</text>
+      <text x="16" y="126" fill="#cbd5e1" font-size="10.5">• Headline &amp; paragraph proposition</text>
+      <text x="16" y="144" fill="#cbd5e1" font-size="10.5">• Direct WHOIS &amp; DoH server details</text>
+      <text x="16" y="162" fill="#a78bfa" font-size="10">One-click feed into Strategy AI</text>
+    </g>
+
+    <!-- Component 4: Marketing AI Launch Suite -->
+    <g transform="translate(995, 25)">
+      <rect width="305" height="180" rx="14" fill="#0f172a" stroke="#334155" stroke-width="1.5"/>
+      <text x="16" y="26" fill="#f8fafc" font-size="13" font-weight="700">AI Launch Campaign Suite</text>
+      <text x="16" y="42" fill="#64748b" font-size="11">Strategy &amp; Outreach Engine</text>
+      <path d="M 16 52 L 289 52" stroke="#1e293b" stroke-width="1"/>
+      <text x="16" y="72" fill="#cbd5e1" font-size="10.5">• Fill &amp; Auto-Generate from Site</text>
+      <text x="16" y="90" fill="#cbd5e1" font-size="10.5">• Multilingual auto-detection (RO/EN/DE)</text>
+      <text x="16" y="108" fill="#cbd5e1" font-size="10.5">• Motto, 3 Taglines &amp; Elevator Pitch</text>
+      <text x="16" y="126" fill="#cbd5e1" font-size="10.5">• Hour-by-hour launch schedule</text>
+      <text x="16" y="144" fill="#cbd5e1" font-size="10.5">• Cold email &amp; SEO search keywords</text>
+      <text x="16" y="162" fill="#fb7185" font-size="10">Viral growth loop engineering</text>
+    </g>
+  </g>
+
+  <!-- Connectors from Tier 1 to Tier 2 -->
+  <path d="M 360 335 L 360 380" stroke="#6366f1" stroke-width="2.5" stroke-dasharray="4,4" marker-end="url(#arrow)"/>
+  <path d="M 720 335 L 720 380" stroke="#6366f1" stroke-width="2.5" stroke-dasharray="4,4" marker-end="url(#arrow)"/>
+  <path d="M 1080 335 L 1080 380" stroke="#6366f1" stroke-width="2.5" stroke-dasharray="4,4" marker-end="url(#arrow)"/>
+
+  <!-- ==================== TIER 2: SERVER & API CONCURRENCY LAYER ==================== -->
+  <g transform="translate(60, 390)">
+    <rect width="1320" height="235" rx="20" fill="url(#blueCard)" stroke="#6366f1" stroke-width="2"/>
+    <rect x="20" y="-12" width="310" height="24" rx="6" fill="#6366f1"/>
+    <text x="30" y="4" fill="#ffffff" font-size="11" font-weight="800" letter-spacing="1">2. SERVER CORE &amp; INTELLIGENCE APIS (/api/*)</text>
+
+    <!-- Sub-module 1: /api/check Concurrency -->
+    <g transform="translate(20, 25)">
+      <rect width="305" height="185" rx="14" fill="#0f172a" stroke="#334155" stroke-width="1.5"/>
+      <text x="16" y="26" fill="#f8fafc" font-size="13" font-weight="700">DNS &amp; Platform /api/check</text>
+      <text x="16" y="42" fill="#64748b" font-size="11">Promise.allSettled Concurrency</text>
+      <path d="M 16 52 L 289 52" stroke="#1e293b" stroke-width="1"/>
+      <text x="16" y="72" fill="#cbd5e1" font-size="10.5">• 28+ parallel asynchronous checks</text>
+      <text x="16" y="90" fill="#cbd5e1" font-size="10.5">• Isolated AbortController (4.5s max)</text>
+      <text x="16" y="108" fill="#cbd5e1" font-size="10.5">• Top 6 TLDs + custom TLD batching</text>
+      <text x="16" y="126" fill="#cbd5e1" font-size="10.5">• 14+ Package registry micro-lookups</text>
+      <text x="16" y="144" fill="#cbd5e1" font-size="10.5">• Resilient partial-failure isolation</text>
+      <text x="16" y="162" fill="#38bdf8" font-size="10">GET single-target + POST batch mode</text>
+    </g>
+
+    <!-- Sub-module 2: /api/wikipedia Tiered Crawler -->
+    <g transform="translate(345, 25)">
+      <rect width="305" height="185" rx="14" fill="#0f172a" stroke="#334155" stroke-width="1.5"/>
+      <text x="16" y="26" fill="#f8fafc" font-size="13" font-weight="700">Web Crawler /api/wikipedia</text>
+      <text x="16" y="42" fill="#64748b" font-size="11">Progressive Tiered DNS &amp; HTTP</text>
+      <path d="M 16 52 L 289 52" stroke="#1e293b" stroke-width="1"/>
+      <text x="16" y="72" fill="#cbd5e1" font-size="10.5">• Tier 0: User custom &amp; typed TLDs</text>
+      <text x="16" y="90" fill="#cbd5e1" font-size="10.5">• Tier 1: .com, .xyz, .io, .ai, .app...</text>
+      <text x="16" y="108" fill="#cbd5e1" font-size="10.5">• Tier 2: ccTLDs (.ro, .de, .uk, .eu...)</text>
+      <text x="16" y="126" fill="#cbd5e1" font-size="10.5">• Script lander detection (/lander, bodis)</text>
+      <text x="16" y="144" fill="#cbd5e1" font-size="10.5">• Romanian SRL, CUI, RC extractor</text>
+      <text x="16" y="162" fill="#34d399" font-size="10">Discovered authentic &amp; parked feeds</text>
+    </g>
+
+    <!-- Sub-module 3: /api/trademark Engine -->
+    <g transform="translate(670, 25)">
+      <rect width="305" height="185" rx="14" fill="#0f172a" stroke="#334155" stroke-width="1.5"/>
+      <text x="16" y="26" fill="#f8fafc" font-size="13" font-weight="700">Legal Risk /api/trademark</text>
+      <text x="16" y="42" fill="#64748b" font-size="11">Commercial Collision Intelligence</text>
+      <path d="M 16 52 L 289 52" stroke="#1e293b" stroke-width="1"/>
+      <text x="16" y="72" fill="#cbd5e1" font-size="10.5">• Commercial entity cross-referencing</text>
+      <text x="16" y="90" fill="#cbd5e1" font-size="10.5">• Active business name &amp; VAT/Tax ID</text>
+      <text x="16" y="108" fill="#cbd5e1" font-size="10.5">• Software collision (App Store titles)</text>
+      <text x="16" y="126" fill="#cbd5e1" font-size="10.5">• USPTO, EUIPO, WIPO filing deep-links</text>
+      <text x="16" y="144" fill="#cbd5e1" font-size="10.5">• &quot;I own this company&quot; safe override</text>
+      <text x="16" y="162" fill="#fbbf24" font-size="10">High / Medium / Low collision scoring</text>
+    </g>
+
+    <!-- Sub-module 4: /api/marketing-campaign AI Engine -->
+    <g transform="translate(995, 25)">
+      <rect width="305" height="185" rx="14" fill="#0f172a" stroke="#334155" stroke-width="1.5"/>
+      <text x="16" y="26" fill="#f8fafc" font-size="13" font-weight="700">Campaign /api/marketing-campaign</text>
+      <text x="16" y="42" fill="#64748b" font-size="11">Context-Aware Strategic Synthesis</text>
+      <path d="M 16 52 L 289 52" stroke="#1e293b" stroke-width="1"/>
+      <text x="16" y="72" fill="#cbd5e1" font-size="10.5">• Language detection (RO, EN, FR, DE...)</text>
+      <text x="16" y="90" fill="#cbd5e1" font-size="10.5">• Archetype classifier (Gourmet, B2B, Dev)</text>
+      <text x="16" y="108" fill="#cbd5e1" font-size="10.5">• High-converting hero copy &amp; pitches</text>
+      <text x="16" y="126" fill="#cbd5e1" font-size="10.5">• Hour-by-hour launch day strategy</text>
+      <text x="16" y="144" fill="#cbd5e1" font-size="10.5">• Cold outreach email generator</text>
+      <text x="16" y="162" fill="#f43f5e" font-size="10">Native idiom &amp; cultural phrasing</text>
+    </g>
+  </g>
+
+  <!-- Connectors from Tier 2 to Tier 3 Downstream Providers -->
+  <path d="M 220 625 L 220 675" stroke="#06b6d4" stroke-width="2.5" marker-end="url(#arrowCyan)"/>
+  <path d="M 550 625 L 550 675" stroke="#06b6d4" stroke-width="2.5" marker-end="url(#arrowCyan)"/>
+  <path d="M 880 625 L 880 675" stroke="#06b6d4" stroke-width="2.5" marker-end="url(#arrowCyan)"/>
+  <path d="M 1210 625 L 1210 675" stroke="#06b6d4" stroke-width="2.5" marker-end="url(#arrowCyan)"/>
+
+  <!-- ==================== TIER 3: DOWNSTREAM PLATFORM RESOLVERS ==================== -->
+  <g transform="translate(60, 685)">
+    <!-- Column 1: Domains & Cloudflare DoH -->
+    <g transform="translate(0, 0)">
+      <rect width="310" height="240" rx="16" fill="url(#blueCard)" stroke="#1e293b" stroke-width="2"/>
+      <rect x="15" y="-10" width="170" height="20" rx="5" fill="#0284c7"/>
+      <text x="25" y="4" fill="#ffffff" font-size="10" font-weight="800">DOMAINS &amp; CLOUDFLARE DOH</text>
+
+      <text x="16" y="30" fill="#f8fafc" font-size="13" font-weight="700">Cloudflare DoH (RFC 8427)</text>
+      <text x="16" y="46" fill="#38bdf8" font-size="11">cloudflare-dns.com/dns-query</text>
+      <path d="M 16 56 L 292 56" stroke="#1e293b" stroke-width="1"/>
+
+      <text x="16" y="76" fill="#cbd5e1" font-size="10.5">• Defaults: .com, .xyz, .io, .ai, .dev, .org</text>
+      <text x="16" y="94" fill="#cbd5e1" font-size="10.5">• Custom TLDs: .ro, .co.uk, .me, any ICANN</text>
+      <text x="16" y="112" fill="#cbd5e1" font-size="10.5">• type=NS &amp; type=A DNS Query resolution</text>
+      <text x="16" y="130" fill="#34d399" font-size="10.5">• Status 3 (NXDOMAIN) = Available</text>
+      <text x="16" y="148" fill="#f87171" font-size="10.5">• Status 0 (NOERROR) = Taken / Registered</text>
+      <text x="16" y="166" fill="#cbd5e1" font-size="10.5">• Registrar arbitrage: Cloudflare, Porkbun</text>
+      <text x="16" y="184" fill="#cbd5e1" font-size="10.5">• Namecheap, NameSilo, Dynadot renewal fee</text>
+      <text x="16" y="206" fill="#94a3b8" font-size="10">Sub-100ms Anycast global network latency</text>
+    </g>
+
+    <!-- Column 2: Package Registries -->
+    <g transform="translate(335, 0)">
+      <rect width="310" height="240" rx="16" fill="url(#blueCard)" stroke="#1e293b" stroke-width="2"/>
+      <rect x="15" y="-10" width="175" height="20" rx="5" fill="#f59e0b"/>
+      <text x="25" y="4" fill="#ffffff" font-size="10" font-weight="800">PACKAGE REGISTRIES (14+)</text>
+
+      <text x="16" y="30" fill="#f8fafc" font-size="13" font-weight="700">Official Package APIs</text>
+      <text x="16" y="46" fill="#fbbf24" font-size="11">Core Defaults + Dropdown Registry</text>
+      <path d="M 16 56 L 292 56" stroke="#1e293b" stroke-width="1"/>
+
+      <text x="16" y="76" fill="#cbd5e1" font-size="10.5">• JavaScript: npm registry API</text>
+      <text x="16" y="94" fill="#cbd5e1" font-size="10.5">• Python: PyPI JSON metadata API</text>
+      <text x="16" y="112" fill="#cbd5e1" font-size="10.5">• Rust: Crates.io Cargo REST API</text>
+      <text x="16" y="130" fill="#cbd5e1" font-size="10.5">• Linux: AUR RPC v5, APT Launchpad</text>
+      <text x="16" y="148" fill="#cbd5e1" font-size="10.5">• Ruby: RubyGems, Homebrew Formulae</text>
+      <text x="16" y="166" fill="#cbd5e1" font-size="10.5">• .NET: NuGet, Dart: Pub.dev, Elixir: Hex</text>
+      <text x="16" y="184" fill="#cbd5e1" font-size="10.5">• PHP: Packagist, Perl: CPAN, Clojars</text>
+      <text x="16" y="206" fill="#94a3b8" font-size="10">Accurate 404/200 HTTP code inspection</text>
+    </g>
+
+    <!-- Column 3: Social & Developer Platforms -->
+    <g transform="translate(670, 0)">
+      <rect width="310" height="240" rx="16" fill="url(#blueCard)" stroke="#1e293b" stroke-width="2"/>
+      <rect x="15" y="-10" width="180" height="20" rx="5" fill="#8b5cf6"/>
+      <text x="25" y="4" fill="#ffffff" font-size="10" font-weight="800">SOCIAL &amp; CLOUD IDENTITIES</text>
+
+      <text x="16" y="30" fill="#f8fafc" font-size="13" font-weight="700">Zero-Block Protocol Resolvers</text>
+      <text x="16" y="46" fill="#c084fc" font-size="11">Unthrottled Identity Verification</text>
+      <path d="M 16 56 L 292 56" stroke="#1e293b" stroke-width="1"/>
+
+      <text x="16" y="76" fill="#cbd5e1" font-size="10.5">• GitHub: User &amp; Organization probe</text>
+      <text x="16" y="94" fill="#cbd5e1" font-size="10.5">• X / Twitter: Syndication endpoint</text>
+      <text x="16" y="112" fill="#cbd5e1" font-size="10.5">• Bluesky: AT Protocol resolveHandle</text>
+      <text x="16" y="130" fill="#cbd5e1" font-size="10.5">• Telegram: t.me username resolver</text>
+      <text x="16" y="148" fill="#cbd5e1" font-size="10.5">• YouTube, LinkedIn, GitLab profiles</text>
+      <text x="16" y="166" fill="#cbd5e1" font-size="10.5">• Docker Hub repository lookup</text>
+      <text x="16" y="184" fill="#cbd5e1" font-size="10.5">• Dev.to, Substack &amp; Hugging Face</text>
+      <text x="16" y="206" fill="#94a3b8" font-size="10">Rate-limit safe browser user-agents</text>
+    </g>
+
+    <!-- Column 4: Legal & Official Registries -->
+    <g transform="translate(1005, 0)">
+      <rect width="315" height="240" rx="16" fill="url(#blueCard)" stroke="#1e293b" stroke-width="2"/>
+      <rect x="15" y="-10" width="180" height="20" rx="5" fill="#10b981"/>
+      <text x="25" y="4" fill="#ffffff" font-size="10" font-weight="800">LEGAL &amp; TRADEMARK OFFICES</text>
+
+      <text x="16" y="30" fill="#f8fafc" font-size="13" font-weight="700">Global IP &amp; Corporate Registries</text>
+      <text x="16" y="46" fill="#6ee7b7" font-size="11">Official Commercial Intelligence</text>
+      <path d="M 16 56 L 297 56" stroke="#1e293b" stroke-width="1"/>
+
+      <text x="16" y="76" fill="#cbd5e1" font-size="10.5">• USPTO: United States Patent &amp; TM Office</text>
+      <text x="16" y="94" fill="#cbd5e1" font-size="10.5">• EUIPO: European Intellectual Property Office</text>
+      <text x="16" y="112" fill="#cbd5e1" font-size="10.5">• WIPO: Global Brand Database</text>
+      <text x="16" y="130" fill="#cbd5e1" font-size="10.5">• Romania: ONRC &amp; Min. Finanțelor</text>
+      <text x="16" y="148" fill="#cbd5e1" font-size="10.5">• App Store &amp; Google Play software index</text>
+      <text x="16" y="166" fill="#cbd5e1" font-size="10.5">• Wikipedia / Wikimedia Foundation API</text>
+      <text x="16" y="184" fill="#cbd5e1" font-size="10.5">• RDAP / ICANN Registry Directory Access</text>
+      <text x="16" y="206" fill="#94a3b8" font-size="10">Deep-link pre-filled trademark queries</text>
+    </g>
+  </g>
+
+  <!-- ==================== INFRASTRUCTURE FOOTER ==================== -->
+  <g transform="translate(60, 990)">
+    <rect width="1320" height="55" rx="14" fill="#0f172a" stroke="#1e293b" stroke-width="1.5"/>
+    <text x="25" y="24" fill="#ffffff" font-size="12" font-weight="800">HOST &amp; DEPLOYMENT ARCHITECTURE:</text>
+    <text x="25" y="42" fill="#94a3b8" font-size="11">Next.js 14 App Router Standalone • Tailscale Encrypted WireGuard Mesh VPN • Edge-Cached Cloudflare DNS • Zero External Database Overhead</text>
+
+    <text x="1295" y="32" fill="#6366f1" font-size="11" font-weight="700" text-anchor="end">BrandPulse v1.2 • Production Architecture Scheme</text>
+  </g>
+</svg>

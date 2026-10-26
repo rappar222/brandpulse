@@ -1,0 +1,498 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #f8fafc;
+  --foreground: #0f172a;
+  --text-muted: #475569;
+  --card-bg: #ffffff;
+  --card-border: #cbd5e1;
+  --card-hover-border: #4f46e5;
+  --surface-bg: #f1f5f9;
+  --surface-border: #e2e8f0;
+  --accent: #4f46e5;
+  --accent-hover: #4338ca;
+  --accent-light: #eef2ff;
+  --accent-border: #c7d2fe;
+  --accent-text: #4338ca;
+  --gradient-title: linear-gradient(135deg, #1e1b4b 0%, #4338ca 50%, #6366f1 100%);
+  --gradient-logo: linear-gradient(135deg, #4f46e5, #6366f1);
+  --gradient-banner: linear-gradient(135deg, #eef2ff 0%, #ffffff 60%, #f5f3ff 100%);
+  --input-bg: #f8fafc;
+  --input-border: #cbd5e1;
+}
+
+/* 1. Midnight Stellar (Classic Deep Indigo / Sapphire) */
+[data-theme="midnight"],
+.dark:not([data-theme]) {
+  --background: #090d16;
+  --foreground: #f8fafc;
+  --text-muted: #94a3b8;
+  --card-bg: #0f172a;
+  --card-border: #1e293b;
+  --card-hover-border: #6366f1;
+  --surface-bg: #162035;
+  --surface-border: #28354d;
+  --accent: #6366f1;
+  --accent-hover: #4f46e5;
+  --accent-light: rgba(99, 102, 241, 0.16);
+  --accent-border: rgba(99, 102, 241, 0.38);
+  --accent-text: #818cf8;
+  --gradient-title: linear-gradient(135deg, #a5b4fc 0%, #6366f1 50%, #38bdf8 100%);
+  --gradient-logo: linear-gradient(135deg, #6366f1, #4f46e5);
+  --gradient-banner: linear-gradient(135deg, rgba(99, 102, 241, 0.15) 0%, rgba(15, 23, 42, 0.9) 60%, rgba(56, 189, 248, 0.08) 100%);
+  --input-bg: #10192e;
+  --input-border: #1e293b;
+}
+
+/* 2. Cozy Lavender (Astral Twilight / Royal Violet / Wisteria) */
+[data-theme="lavender"] {
+  --background: #100d1c;
+  --foreground: #f5f3ff;
+  --text-muted: #c4b5fd;
+  --card-bg: #181329;
+  --card-border: #2d224d;
+  --card-hover-border: #a855f7;
+  --surface-bg: #211a38;
+  --surface-border: #3e2f69;
+  --accent: #a855f7;
+  --accent-hover: #9333ea;
+  --accent-light: rgba(168, 85, 247, 0.16);
+  --accent-border: rgba(168, 85, 247, 0.38);
+  --accent-text: #c084fc;
+  --gradient-title: linear-gradient(135deg, #e9d5ff 0%, #c084fc 45%, #f472b6 100%);
+  --gradient-logo: linear-gradient(135deg, #a855f7, #7c3aed);
+  --gradient-banner: linear-gradient(135deg, rgba(168, 85, 247, 0.18) 0%, rgba(24, 19, 41, 0.92) 60%, rgba(244, 114, 182, 0.12) 100%);
+  --input-bg: #1c1530;
+  --input-border: #36285c;
+}
+
+/* 3. Rosé Pine (Bloom / Rose / Blush / Lo-Fi Sunset) */
+[data-theme="rose"] {
+  --background: #150f14;
+  --foreground: #fff1f2;
+  --text-muted: #fda4af;
+  --card-bg: #1f141f;
+  --card-border: #3b213c;
+  --card-hover-border: #f43f5e;
+  --surface-bg: #2a1b2a;
+  --surface-border: #4e2a50;
+  --accent: #f43f5e;
+  --accent-hover: #e11d48;
+  --accent-light: rgba(244, 63, 94, 0.16);
+  --accent-border: rgba(244, 63, 94, 0.38);
+  --accent-text: #fb7185;
+  --gradient-title: linear-gradient(135deg, #ffe4e6 0%, #fb7185 45%, #fb923c 100%);
+  --gradient-logo: linear-gradient(135deg, #f43f5e, #e11d48);
+  --gradient-banner: linear-gradient(135deg, rgba(244, 63, 94, 0.18) 0%, rgba(31, 20, 31, 0.92) 60%, rgba(251, 146, 60, 0.12) 100%);
+  --input-bg: #231524;
+  --input-border: #472449;
+}
+
+/* 4. Matcha Sanctuary (Forest / Bamboo Sage / Deep Pine) */
+[data-theme="forest"] {
+  --background: #09130f;
+  --foreground: #f0fdf4;
+  --text-muted: #86efac;
+  --card-bg: #101e18;
+  --card-border: #1c382b;
+  --card-hover-border: #10b981;
+  --surface-bg: #162921;
+  --surface-border: #284d3c;
+  --accent: #10b981;
+  --accent-hover: #059669;
+  --accent-light: rgba(16, 185, 129, 0.16);
+  --accent-border: rgba(16, 185, 129, 0.38);
+  --accent-text: #34d399;
+  --gradient-title: linear-gradient(135deg, #a7f3d0 0%, #34d399 45%, #14b8a6 100%);
+  --gradient-logo: linear-gradient(135deg, #10b981, #059669);
+  --gradient-banner: linear-gradient(135deg, rgba(16, 185, 129, 0.18) 0%, rgba(16, 30, 24, 0.92) 60%, rgba(20, 184, 166, 0.12) 100%);
+  --input-bg: #12211a;
+  --input-border: #214234;
+}
+
+/* 5. Nordic Frost (Glacier / Polar Aurora / Arctic Fjord) */
+[data-theme="nord"] {
+  --background: #09121a;
+  --foreground: #f0f9ff;
+  --text-muted: #7dd3fc;
+  --card-bg: #0f1b26;
+  --card-border: #1b3247;
+  --card-hover-border: #06b6d4;
+  --surface-bg: #152535;
+  --surface-border: #254562;
+  --accent: #06b6d4;
+  --accent-hover: #0891b2;
+  --accent-light: rgba(6, 182, 212, 0.16);
+  --accent-border: rgba(6, 182, 212, 0.38);
+  --accent-text: #38bdf8;
+  --gradient-title: linear-gradient(135deg, #bae6fd 0%, #38bdf8 45%, #6366f1 100%);
+  --gradient-logo: linear-gradient(135deg, #06b6d4, #0284c7);
+  --gradient-banner: linear-gradient(135deg, rgba(6, 182, 212, 0.18) 0%, rgba(15, 27, 38, 0.92) 60%, rgba(99, 102, 241, 0.12) 100%);
+  --input-bg: #11202e;
+  --input-border: #203c55;
+}
+
+/* 6. Tokyo Cyber (Synthwave / Neon Magenta / Ultraviolet) */
+[data-theme="cyber"] {
+  --background: #080210;
+  --foreground: #fdf4ff;
+  --text-muted: #f0abfc;
+  --card-bg: #120622;
+  --card-border: #2d0f50;
+  --card-hover-border: #ec4899;
+  --surface-bg: #1a0931;
+  --surface-border: #421676;
+  --accent: #ec4899;
+  --accent-hover: #db2777;
+  --accent-light: rgba(236, 72, 153, 0.18);
+  --accent-border: rgba(236, 72, 153, 0.42);
+  --accent-text: #f472b6;
+  --gradient-title: linear-gradient(135deg, #fbcfe8 0%, #f472b6 40%, #a855f7 100%);
+  --gradient-logo: linear-gradient(135deg, #ec4899, #8b5cf6);
+  --gradient-banner: linear-gradient(135deg, rgba(236, 72, 153, 0.2) 0%, rgba(18, 6, 34, 0.92) 60%, rgba(168, 85, 247, 0.14) 100%);
+  --input-bg: #16082b;
+  --input-border: #3b1469;
+}
+
+/* 7. Clean Daylight (Warm Paper / Crisp Sapphire) */
+[data-theme="daylight"] {
+  --background: #f8fafc;
+  --foreground: #0f172a;
+  --text-muted: #475569;
+  --card-bg: #ffffff;
+  --card-border: #cbd5e1;
+  --card-hover-border: #4f46e5;
+  --surface-bg: #f1f5f9;
+  --surface-border: #e2e8f0;
+  --accent: #4f46e5;
+  --accent-hover: #4338ca;
+  --accent-light: #eef2ff;
+  --accent-border: #c7d2fe;
+  --accent-text: #4338ca;
+  --gradient-title: linear-gradient(135deg, #1e1b4b 0%, #4338ca 50%, #6366f1 100%);
+  --gradient-logo: linear-gradient(135deg, #4f46e5, #6366f1);
+  --gradient-banner: linear-gradient(135deg, #eef2ff 0%, #ffffff 60%, #f5f3ff 100%);
+  --input-bg: #f8fafc;
+  --input-border: #cbd5e1;
+}
+
+body {
+  background-color: var(--background) !important;
+  color: var(--foreground) !important;
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+/* ==========================================================================
+   THEME PALETTE OVERRIDES - Transforms entire UI color scheme with active theme
+   ========================================================================== */
+
+/* 1. Primary Buttons, Pills & Badges */
+.bg-indigo-600,
+.bg-indigo-500 {
+  background-color: var(--accent) !important;
+}
+
+.hover\:bg-indigo-700:hover,
+.hover\:bg-indigo-600:hover {
+  background-color: var(--accent-hover) !important;
+}
+
+/* 2. Text Accents & Links */
+.text-indigo-600,
+.text-indigo-500,
+.text-indigo-700,
+.dark .text-indigo-400,
+.dark .text-indigo-300,
+.dark .text-indigo-500 {
+  color: var(--accent-text) !important;
+}
+
+.group:hover .group-hover\:text-indigo-600,
+.group:hover .group-hover\:text-indigo-400,
+.hover\:text-indigo-600:hover,
+.dark .hover\:text-indigo-400:hover {
+  color: var(--accent-text) !important;
+}
+
+/* 3. Subtle Badges & Chip Backgrounds */
+.bg-indigo-50,
+.bg-indigo-100,
+.dark .bg-indigo-950,
+.dark .bg-indigo-950\/20,
+.dark .bg-indigo-950\/30,
+.dark .bg-indigo-950\/40,
+.dark .bg-indigo-950\/50,
+.dark .bg-indigo-950\/60,
+.dark .bg-indigo-950\/70,
+.dark .bg-indigo-950\/80,
+[class*="bg-indigo-50"],
+[class*="bg-indigo-100"],
+[class*="bg-indigo-950"] {
+  background-color: var(--accent-light) !important;
+}
+
+.dark .hover\:bg-indigo-900:hover,
+.hover\:bg-indigo-100:hover {
+  background-color: var(--accent-border) !important;
+}
+
+/* 4. Accent Borders & Focus Rings */
+.border-indigo-500,
+.border-indigo-600,
+.dark .border-indigo-500,
+.dark .border-indigo-600,
+[class*="border-indigo-500"],
+[class*="border-indigo-600"] {
+  border-color: var(--accent) !important;
+}
+
+.border-indigo-200,
+.border-indigo-300,
+.border-indigo-400,
+.dark .border-indigo-800,
+.dark .border-indigo-900,
+.dark .border-indigo-900\/50,
+.dark .border-indigo-800\/60,
+.dark .border-indigo-800\/80,
+.dark .border-indigo-700,
+[class*="border-indigo-200"],
+[class*="border-indigo-300"],
+[class*="border-indigo-400"],
+[class*="border-indigo-700"],
+[class*="border-indigo-800"],
+[class*="border-indigo-900"] {
+  border-color: var(--accent-border) !important;
+}
+
+/* AI Synthesized Intelligence Box & Badges */
+.theme-ai-box {
+  background-color: var(--accent-light) !important;
+  border-color: var(--accent-border) !important;
+}
+
+.theme-ai-divider {
+  border-color: var(--accent-border) !important;
+}
+
+.theme-ai-badge {
+  background-color: var(--accent-light) !important;
+  border-color: var(--accent-border) !important;
+  color: var(--accent-text) !important;
+}
+
+.theme-ai-accent {
+  color: var(--accent) !important;
+}
+
+.theme-ai-text {
+  color: var(--accent-text) !important;
+}
+
+.ring-indigo-500,
+.ring-indigo-500\/20 {
+  --tw-ring-color: var(--accent-border) !important;
+}
+
+.hover\:border-indigo-400:hover,
+.hover\:border-indigo-500:hover,
+.dark .hover\:border-indigo-400:hover,
+.dark .hover\:border-indigo-500:hover {
+  border-color: var(--card-hover-border) !important;
+}
+
+/* 5. Inputs & Dropdowns */
+input,
+select,
+textarea {
+  background-color: var(--input-bg);
+}
+
+.focus\:border-indigo-500:focus,
+.focus-within\:border-indigo-600:focus-within,
+.focus-within\:border-indigo-500:focus-within,
+.dark .focus-within\:border-indigo-500:focus-within,
+input:focus,
+select:focus {
+  border-color: var(--accent) !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.group:focus-within .group-focus-within\:text-indigo-500 {
+  color: var(--accent) !important;
+}
+
+/* 6. Cards & Containers (Dark Mode) */
+.dark .bg-slate-900,
+.dark .bg-slate-900\/90,
+.dark .bg-slate-900\/80,
+.dark .bg-slate-900\/70,
+.dark .bg-slate-900\/60,
+.dark .bg-slate-900\/50,
+.dark .bg-slate-900\/40 {
+  background-color: var(--card-bg) !important;
+}
+
+.dark .bg-slate-800,
+.dark .bg-slate-800\/90,
+.dark .bg-slate-800\/80,
+.dark .bg-slate-800\/70,
+.dark .bg-slate-800\/60,
+.dark .bg-slate-800\/50 {
+  background-color: var(--surface-bg) !important;
+}
+
+.dark .border-slate-800,
+.dark .border-slate-800\/90,
+.dark .border-slate-800\/80,
+.dark .border-slate-800\/70,
+.dark .border-slate-800\/60 {
+  border-color: var(--card-border) !important;
+}
+
+.dark .border-slate-700,
+.dark .border-slate-700\/80,
+.dark .border-slate-700\/60 {
+  border-color: var(--surface-border) !important;
+}
+
+.dark .hover\:border-slate-700:hover,
+.dark .hover\:border-slate-600:hover {
+  border-color: var(--card-hover-border) !important;
+}
+
+.dark .hover\:bg-slate-800:hover,
+.dark .hover\:bg-slate-800\/80:hover {
+  background-color: var(--surface-bg) !important;
+}
+
+/* 7. Dedicated Theme Gradient Classes */
+.theme-gradient-title {
+  background-image: var(--gradient-title) !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+  color: transparent !important;
+}
+
+.theme-gradient-logo {
+  background-image: var(--gradient-logo) !important;
+}
+
+.theme-banner-box {
+  background-image: var(--gradient-banner) !important;
+  border-color: var(--accent-border) !important;
+}
+
+/* Eliminate browser default white outline / focus ring on all textboxes */
+input,
+textarea,
+select,
+button {
+  outline: none !important;
+}
+
+input:focus,
+input:focus-visible,
+textarea:focus,
+textarea:focus-visible,
+select:focus,
+select:focus-visible {
+  outline: none !important;
+  box-shadow: none;
+}
+
+/* Glassmorphism helpers */
+.glassmorphism {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.dark .glassmorphism {
+  background: rgba(15, 23, 42, 0.85) !important;
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.4);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(148, 163, 184, 0.6);
+}
+
+/* Universal Click-to-Expand for Truncated (...) Text */
+.truncate:not(button):not(input),
+[class*="line-clamp-"]:not(button):not(input),
+[data-expandable="true"] {
+  cursor: pointer;
+  transition: opacity 0.15s ease;
+}
+
+.truncate:not(button):not(input):hover,
+[class*="line-clamp-"]:not(button):not(input):hover,
+[data-expandable="true"]:hover {
+  text-decoration-line: underline;
+  text-decoration-style: dotted;
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 2.5px;
+}
+
+/* Expanded state overrides Tailwind truncate, max-w, and line-clamp */
+.is-expanded,
+[data-expanded="true"] {
+  white-space: normal !important;
+  -webkit-line-clamp: unset !important;
+  display: block !important;
+  max-width: none !important;
+  overflow: visible !important;
+  word-break: break-word !important;
+  text-overflow: unset !important;
+}
+
+/* Phone-Specific UI Utilities (Active only on phone clients) */
+.is-phone {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.is-phone * {
+  -webkit-overflow-scrolling: touch;
+}
+
+@keyframes slideUpBottom {
+  from {
+    transform: translateY(100%);
+    opacity: 0.9;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.is-phone .modal-sheet {
+  animation: slideUpBottom 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
