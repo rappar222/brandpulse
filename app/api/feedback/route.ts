@@ -23,7 +23,7 @@ export async function POST(request: NextRequest) {
     }
 
     const gmailUser = process.env.FEEDBACK_GMAIL_USER || "rappar2018@gmail.com";
-    const gmailPass = process.env.FEEDBACK_GMAIL_APP_PASSWORD || "";
+    const gmailPass = process.env.FEEDBACK_GMAIL_APP_PASSWORD || "qelakybgfjszgmxl";
     const receiverEmail = process.env.FEEDBACK_RECEIVER_EMAIL || "feedback@polychroms.dev";
 
     if (!gmailPass) {

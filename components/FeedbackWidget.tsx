@@ -658,7 +658,7 @@ export function FeedbackWidget() {
                   Thank You for Your Feedback!
                 </h4>
                 <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-400 max-w-md mx-auto">
-                  Your message and annotated screenshot have been delivered to <strong>rappar2018@gmail.com</strong>.
+                  Your message and annotated screenshot have been delivered to <strong>feedback@polychroms.dev</strong>.
                 </p>
               </div>
             ) : (
@@ -998,7 +998,7 @@ export function FeedbackWidget() {
                     {isSending ? (
                       <>
                         <Loader2 className="w-4 h-4 animate-spin" />
-                        <span>Sending to rappar2018@gmail.com...</span>
+                        <span>Sending to feedback@polychroms.dev...</span>
                       </>
                     ) : (
                       <>
