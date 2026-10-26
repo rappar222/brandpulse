@@ -281,7 +281,7 @@ function OffersContent() {
 
             <div className="flex items-center gap-2">
               <span className="text-base font-extrabold theme-gradient-title">
-                BrandPulse
+                PulsarCheck
               </span>
               <span className="text-[11px] font-semibold px-2 py-0.5 rounded-full bg-emerald-50 dark:bg-emerald-950/60 text-emerald-700 dark:text-emerald-300 border border-emerald-200/60 dark:border-emerald-800/60">
                 {t("registrarDeals")}
@@ -736,7 +736,7 @@ function OffersContent() {
       <footer className="border-t border-slate-200/80 dark:border-slate-800/80 py-6 mt-12 bg-white/50 dark:bg-slate-950/50 text-xs text-slate-500 dark:text-slate-400">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-3">
           <div className="flex items-center gap-2">
-            <span className="font-semibold text-slate-700 dark:text-slate-300">BrandPulse</span>
+            <span className="font-semibold text-slate-700 dark:text-slate-300">PulsarCheck</span>
             <span>•</span>
             <span>Domain Registrar Comparison & Live Availability</span>
           </div>

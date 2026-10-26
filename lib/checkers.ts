@@ -2006,7 +2006,7 @@ export async function checkHex(name: string): Promise<CheckResult> {
     const res = await fetch(apiUrl, {
       method: "GET",
       headers: {
-        "User-Agent": "BrandPulse/1.0 (https://brandchecker.dev)",
+        "User-Agent": "PulsarCheck/1.0 (https://pulsarcheck.dev)",
         Accept: "application/json",
       },
       signal,

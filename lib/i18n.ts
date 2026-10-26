@@ -326,7 +326,7 @@ export const translations = {
     adviceDesc: "Many traditional registrars attract buyers with a discounted $1 - $3 first-year rate but inflate renewals to $20+ annually. For long-term projects, registrars like Cloudflare and Porkbun offer flat wholesale/at-cost renewal rates, free lifetime WHOIS privacy protection, and zero hidden upsells.",
 
     // Footer
-    footerRights: "BrandPulse",
+    footerRights: "PulsarCheck",
     architectureDownload: "Architecture Scheme (.svg)",
     builtWith: "Built with Next.js App Router, TypeScript & Tailwind CSS",
 
@@ -714,7 +714,7 @@ export const translations = {
     adviceDesc: "Mulți registrari tradiționali atrag cumpărătorii cu un preț redus de 1$ - 3$ în primul an, dar cresc reînnoirile la peste 20$ anual. Pentru proiecte pe termen lung, registrari precum Cloudflare și Porkbun oferă tarife de reînnoire fără adaos, protecție gratuită pe viață a intimității WHOIS și zero vânzări ascunse.",
 
     // Footer
-    footerRights: "BrandPulse",
+    footerRights: "PulsarCheck",
     architectureDownload: "Diagramă Arhitectură (.svg)",
     builtWith: "Construit cu Next.js App Router, TypeScript & Tailwind CSS",
 
@@ -1102,7 +1102,7 @@ export const translations = {
     adviceDesc: "Viele traditionelle Registrare locken mit $1-$3 im 1. Jahr und verdoppeln die Verlängerung später. Registrare wie Cloudflare und Porkbun bieten transparente Großhandelspreise und kostenlosen WHOIS-Schutz.",
 
     // Footer
-    footerRights: "BrandPulse",
+    footerRights: "PulsarCheck",
     architectureDownload: "Architektur-Diagramm (.svg)",
     builtWith: "Erstellt mit Next.js App Router, TypeScript & Tailwind CSS",
 
@@ -1490,7 +1490,7 @@ export const translations = {
     adviceDesc: "Beaucoup de bureaux d'enregistrement proposent 1$ la première année puis augmentent drastiquement les renouvellements. Des acteurs comme Cloudflare et Porkbun garantissent des prix transparents et la confidentialité WHOIS gratuite.",
 
     // Footer
-    footerRights: "BrandPulse",
+    footerRights: "PulsarCheck",
     architectureDownload: "Schéma d'Architecture (.svg)",
     builtWith: "Construit avec Next.js App Router, TypeScript & Tailwind CSS",
 
@@ -1878,7 +1878,7 @@ export const translations = {
     adviceDesc: "Muchos registradores ofrecen $1 en el primer año pero aumentan fuertemente en renovación. Registradores como Cloudflare y Porkbun ofrecen tarifas planas transparentes y privacidad WHOIS gratuita de por vida.",
 
     // Footer
-    footerRights: "BrandPulse",
+    footerRights: "PulsarCheck",
     architectureDownload: "Diagrama de Arquitectura (.svg)",
     builtWith: "Construido con Next.js App Router, TypeScript & Tailwind CSS",
 
@@ -2266,7 +2266,7 @@ export const translations = {
     adviceDesc: "Molti registrar offrono promozioni a $1 al primo anno ma aumentano i prezzi ai rinnovi. Registrar come Cloudflare e Porkbun offrono prezzi all'ingrosso trasparenti e privacy WHOIS gratuita a vita.",
 
     // Footer
-    footerRights: "BrandPulse",
+    footerRights: "PulsarCheck",
     architectureDownload: "Diagramma Architettura (.svg)",
     builtWith: "Creato con Next.js App Router, TypeScript & Tailwind CSS",
 
@@ -2654,7 +2654,7 @@ export const translations = {
     adviceDesc: "Muitos registradores oferecem grandes descontos no primeiro ano e aumentam muito a renovação. Empresas como Cloudflare e Porkbun oferecem taxas no atacado sem acréscimos e privacidade WHOIS vitalícia grátis.",
 
     // Footer
-    footerRights: "BrandPulse",
+    footerRights: "PulsarCheck",
     architectureDownload: "Diagrama de Arquitetura (.svg)",
     builtWith: "Construído com Next.js App Router, TypeScript & Tailwind CSS",
 
@@ -3042,7 +3042,7 @@ export const translations = {
     adviceDesc: "初年度を$1程度に設定し、翌年の更新料金を大幅に引き上げるレジストラが多く存在します。CloudflareやPorkbunは卸値のフラットな更新料金と無料WHOIS保護を提供しています。",
 
     // Footer
-    footerRights: "BrandPulse",
+    footerRights: "PulsarCheck",
     architectureDownload: "構成図をダウンロード (.svg)",
     builtWith: "Next.js App Router, TypeScript & Tailwind CSS 製",
 
@@ -3430,7 +3430,7 @@ export const translations = {
     adviceDesc: "许多老牌注册商以 1 美元甚至更低的首年价格吸引用户，但在第二年续费时大幅涨价。Cloudflare 与 Porkbun 坚持透明的批发成本定价，并免费提供终身 WHOIS 隐私保护。",
 
     // Footer
-    footerRights: "BrandPulse",
+    footerRights: "PulsarCheck",
     architectureDownload: "下载架构方案图 (.svg)",
     builtWith: "基于 Next.js App Router, TypeScript & Tailwind CSS 构建",
 
@@ -3818,7 +3818,7 @@ export const translations = {
     adviceDesc: "일부 등록 대행업체는 첫해 1달러 수준으로 할인 후 갱신 시 과도한 비용을 청구합니다. Cloudflare나 Porkbun은 도매 원가 기반의 정액 갱신 요금과 무료 평생 WHOIS 보호를 제공합니다.",
 
     // Footer
-    footerRights: "BrandPulse",
+    footerRights: "PulsarCheck",
     architectureDownload: "아키텍처 구성도 다운로드 (.svg)",
     builtWith: "Next.js App Router, TypeScript & Tailwind CSS로 제작",
 

@@ -181,7 +181,7 @@ export function StatsOverview({
   const handleCopySummary = async () => {
     if (!results.length) return;
     const lines = [
-      `Brand & Handle Availability Report for "${name}" (Brand Score: ${brandScore}/100 - ${verdictLabel}):`,
+      `PulsarCheck Availability Report for "${name}" (Brand Score: ${brandScore}/100 - ${verdictLabel}):`,
       `Linguistics: ${linguistics.length} chars (${linguistics.syllables} syllables) | ${linguistics.radioReason}`,
       `Total Targets: ${totalCount} | Available: ${availableCount} | Taken: ${takenCount} | Rate-limited/Error: ${unknownCount}`,
       "",
@@ -213,7 +213,7 @@ export function StatsOverview({
     const url = URL.createObjectURL(blob);
     const link = document.createElement("a");
     link.href = url;
-    link.setAttribute("download", `brandpulse-${name}-availability.csv`);
+    link.setAttribute("download", `pulsarcheck-${name}-availability.csv`);
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);

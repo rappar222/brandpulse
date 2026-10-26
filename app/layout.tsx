@@ -16,9 +16,9 @@ const monoFont = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Brand & Handle Availability Checker",
+  title: "PulsarCheck — Brand & Domain Availability Engine",
   description:
-    "Instantly check domain, package registry, and social media handle availability in real-time.",
+    "Instantly check domain availability, 12+ social networks, developer package registries, and trademark conflicts in real-time.",
 };
 
 export default function RootLayout({

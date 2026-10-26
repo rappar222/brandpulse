@@ -1,4 +1,4 @@
-# BrandPulse — Brand & Handle Availability Checker
+# PulsarCheck — Brand, Domain & Handle Availability Engine
 
 A fast, modern full-stack web application built with **Next.js (App Router)**, **TypeScript**, and **Tailwind CSS** to check domain, package registry, and developer/social platform handle availability simultaneously in real-time.
 

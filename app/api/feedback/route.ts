@@ -56,7 +56,7 @@ export async function POST(request: NextRequest) {
     const rawQuery = metadata.query ? String(metadata.query).trim() : "";
 
     // If redacted, completely hide the company/search query from subject line and metadata
-    let emailSubject = `[BrandPulse Feedback] ${catInfo.emoji} ${catInfo.label}`;
+    let emailSubject = `[PulsarCheck Feedback] ${catInfo.emoji} ${catInfo.label}`;
     if (isRedacted) {
       emailSubject += ` [Company Redacted]`;
     } else if (rawQuery) {
@@ -99,7 +99,7 @@ export async function POST(request: NextRequest) {
       const base64Data = screenshot.replace(/^data:image\/\w+;base64,/, "");
       const imageBuffer = Buffer.from(base64Data, "base64");
       attachments.push({
-        filename: `brandpulse-feedback-${Date.now()}.png`,
+        filename: `pulsarcheck-feedback-${Date.now()}.png`,
         content: imageBuffer,
         contentType: "image/png",
         cid: "feedback-screenshot-image",
@@ -113,7 +113,7 @@ export async function POST(request: NextRequest) {
           
           <div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 2px solid #edf2f7; padding-bottom: 16px; margin-bottom: 20px;">
             <div style="font-size: 20px; font-weight: 800; color: #1e293b;">
-              BrandPulse User Feedback
+              PulsarCheck User Feedback
             </div>
             <span style="display: inline-block; padding: 4px 12px; background-color: #ede9fe; color: #6d28d9; border-radius: 20px; font-size: 12px; font-weight: 700;">
               ${catInfo.emoji} ${catInfo.label}
@@ -219,13 +219,13 @@ ${sanitizedMessage}
 
         </div>
         <div style="text-align: center; margin-top: 16px; font-size: 11px; color: #94a3b8;">
-          BrandPulse Automated In-App Feedback System • Delivered via Gmail SMTP
+          PulsarCheck Automated In-App Feedback System • Delivered via Gmail SMTP
         </div>
       </div>
     `;
 
     await transporter.sendMail({
-      from: `"BrandPulse Feedback" <${gmailUser}>`,
+      from: `"PulsarCheck Feedback" <${gmailUser}>`,
       to: receiverEmail,
       replyTo: userEmail || gmailUser,
       subject: emailSubject,

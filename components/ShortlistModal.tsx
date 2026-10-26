@@ -77,7 +77,7 @@ export function ShortlistModal({
   const handleCopyComparison = async () => {
     if (sortedItems.length === 0) return;
     const lines = [
-      "BrandPulse Candidate Comparison Matrix",
+      "PulsarCheck Candidate Comparison Matrix",
       "======================================",
       ...sortedItems.map(
         (item, idx) =>

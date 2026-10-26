@@ -804,7 +804,7 @@ function HomeContent() {
             <div>
               <div className="flex items-center gap-2">
                 <span className="text-lg sm:text-xl font-extrabold tracking-tight theme-gradient-title">
-                  BrandPulse
+                  PulsarCheck
                 </span>
                 <span className="hidden sm:inline-flex text-[11px] font-semibold px-2 py-0.5 rounded-full bg-indigo-50 dark:bg-indigo-950/60 text-indigo-700 dark:text-indigo-300 border border-indigo-200/60 dark:border-indigo-800/60">
                   {t("launchSuite")}
@@ -1294,7 +1294,7 @@ function HomeContent() {
       <footer className="border-t border-slate-200/80 dark:border-slate-800/80 py-6 mt-12 bg-white/50 dark:bg-slate-950/50 text-xs text-slate-500 dark:text-slate-400">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-3">
           <div className="flex items-center gap-2 flex-wrap justify-center sm:justify-start">
-            <span className="font-semibold text-slate-700 dark:text-slate-300">BrandPulse</span>
+            <span className="font-semibold text-slate-700 dark:text-slate-300">PulsarCheck</span>
             <span>•</span>
             <span>
               RDAP + Cloudflare DoH, GitLab, Dev.to, Substack, GitHub, Docker Hub, Hugging Face, X, YouTube, LinkedIn, USPTO/EUIPO &amp; 14+ Package Registries

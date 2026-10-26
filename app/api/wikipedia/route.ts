@@ -3,7 +3,7 @@ import { WikiSummaryResult, WebSummaryResult, WebSummaryTier } from "@/lib/types
 import { extractDeepCompanyInfo } from "@/lib/companyExtractor";
 
 const WIKI_USER_AGENT =
-  "BrandPulseAvailabilityChecker/1.0 (https://brandpulse.local; contact@brandpulse.local)";
+  "PulsarCheck/1.0 (https://pulsarcheck.dev; contact@pulsarcheck.dev)";
 
 const BROWSER_USER_AGENT =
   "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36";
