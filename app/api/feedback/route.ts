@@ -22,24 +22,30 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    const gmailUser = process.env.FEEDBACK_GMAIL_USER || "rappar2018@gmail.com";
-    const gmailPass = process.env.FEEDBACK_GMAIL_APP_PASSWORD || "qelakybgfjszgmxl";
+    const smtpHost = process.env.SMTP_HOST;
+    const smtpPort = Number(process.env.SMTP_PORT) || 587;
+    const smtpUser = process.env.SMTP_USER || process.env.FEEDBACK_GMAIL_USER || "rappar2018@gmail.com";
+    const smtpPass = process.env.SMTP_PASS || process.env.FEEDBACK_GMAIL_APP_PASSWORD || "qelakybgfjszgmxl";
     const receiverEmail = process.env.FEEDBACK_RECEIVER_EMAIL || "feedback@polychroms.dev";
+    const fromEmail = process.env.FEEDBACK_FROM_EMAIL || "feedback@polychroms.dev";
 
-    if (!gmailPass) {
-      return NextResponse.json(
-        { error: "Gmail App Password is not configured on the server." },
-        { status: 500 }
-      );
-    }
-
-    const transporter = nodemailer.createTransport({
-      service: "gmail",
-      auth: {
-        user: gmailUser,
-        pass: gmailPass,
-      },
-    });
+    const transporter = smtpHost
+      ? nodemailer.createTransport({
+          host: smtpHost,
+          port: smtpPort,
+          secure: process.env.SMTP_SECURE === "true" || smtpPort === 465,
+          auth: {
+            user: smtpUser,
+            pass: smtpPass,
+          },
+        })
+      : nodemailer.createTransport({
+          service: "gmail",
+          auth: {
+            user: smtpUser,
+            pass: smtpPass,
+          },
+        });
 
     const categoryLabels: Record<string, { label: string; emoji: string }> = {
       bug: { label: "Bug Report", emoji: "🐛" },
@@ -219,15 +225,15 @@ ${sanitizedMessage}
 
         </div>
         <div style="text-align: center; margin-top: 16px; font-size: 11px; color: #94a3b8;">
-          PulsarCheck Automated In-App Feedback System • Delivered via Gmail SMTP
+          PulsarCheck Automated In-App Feedback System
         </div>
       </div>
     `;
 
     await transporter.sendMail({
-      from: `"PulsarCheck Feedback" <${gmailUser}>`,
+      from: `"PulsarCheck Feedback" <${fromEmail}>`,
       to: receiverEmail,
-      replyTo: userEmail || gmailUser,
+      replyTo: userEmail || fromEmail,
       subject: emailSubject,
       html: htmlContent,
       attachments,
@@ -241,7 +247,7 @@ ${sanitizedMessage}
     console.error("Feedback email error:", error);
     return NextResponse.json(
       {
-        error: error?.message || "Failed to deliver feedback email via Gmail. Please try again.",
+        error: error?.message || "Failed to deliver feedback email. Please try again.",
       },
       { status: 500 }
     );
