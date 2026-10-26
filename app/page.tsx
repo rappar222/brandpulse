@@ -798,8 +798,12 @@ function HomeContent() {
             }}
             className="flex items-center gap-3 cursor-pointer"
           >
-            <div className="w-10 h-10 rounded-xl theme-gradient-logo flex items-center justify-center text-white shadow-md">
-              <Zap className="w-5 h-5 fill-current" />
+            <div className="w-10 h-10 rounded-xl overflow-hidden shadow-md border border-cyan-500/30 bg-[#02040a] flex items-center justify-center flex-shrink-0">
+              <img
+                src="/logo.svg"
+                alt="PulsarCheck Logo"
+                className="w-full h-full object-cover"
+              />
             </div>
             <div>
               <div className="flex items-center gap-2">

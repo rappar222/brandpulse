@@ -280,6 +280,9 @@ function OffersContent() {
             <span className="text-slate-300 dark:text-slate-700">|</span>
 
             <div className="flex items-center gap-2">
+              <div className="w-6 h-6 rounded-md overflow-hidden border border-cyan-500/30 bg-[#02040a] flex items-center justify-center flex-shrink-0">
+                <img src="/logo.svg" alt="PulsarCheck" className="w-full h-full object-cover" />
+              </div>
               <span className="text-base font-extrabold theme-gradient-title">
                 PulsarCheck
               </span>

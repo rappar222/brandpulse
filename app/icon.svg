@@ -1,0 +1,116 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
+  <defs>
+    <!-- Deep Space Background -->
+    <radialGradient id="space" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#080e24" />
+      <stop offset="100%" stop-color="#02040a" />
+    </radialGradient>
+
+    <!-- 3D Neutron Core Sphere -->
+    <radialGradient id="coreSphere" cx="35%" cy="30%" r="65%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="35%" stop-color="#a5f3fc" />
+      <stop offset="70%" stop-color="#0284c7" />
+      <stop offset="100%" stop-color="#0c2a4d" />
+    </radialGradient>
+
+    <!-- Top Jet (Tilted towards viewer) -->
+    <linearGradient id="topJet" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="30%" stop-color="#67e8f9" stop-opacity="0.9" />
+      <stop offset="70%" stop-color="#0284c7" stop-opacity="0.6" />
+      <stop offset="100%" stop-color="#0369a1" stop-opacity="0" />
+    </linearGradient>
+
+    <!-- Bottom Jet (Tilted away into background) -->
+    <linearGradient id="bottomJet" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.9" />
+      <stop offset="35%" stop-color="#38bdf8" stop-opacity="0.5" />
+      <stop offset="75%" stop-color="#0284c7" stop-opacity="0.25" />
+      <stop offset="100%" stop-color="#075985" stop-opacity="0" />
+    </linearGradient>
+
+    <!-- Blue Glow Effect -->
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="5" result="blur1" />
+      <feGaussianBlur in="SourceGraphic" stdDeviation="15" result="blur2" />
+      <feMerge>
+        <feMergeNode in="blur2" />
+        <feMergeNode in="blur1" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <!-- 3D Dipole Half-Shell Template -->
+    <g id="dipoleHalf">
+      <!-- Inner shell -->
+      <path d="M 0,-15 C -45,-75 -90,-45 -90,0 C -90,45 -45,75 0,15" fill="none" stroke-width="2.5" />
+      <!-- Mid shell -->
+      <path d="M 0,-20 C -75,-120 -150,-70 -150,0 C -150,70 -75,120 0,20" fill="none" stroke-width="2" />
+      <!-- Outer shell -->
+      <path d="M 0,-25 C -110,-175 -215,-100 -215,0 C -215,100 -110,175 0,25" fill="none" stroke-width="1.5" />
+    </g>
+  </defs>
+
+  <!-- Background -->
+  <rect width="500" height="500" rx="40" fill="url(#space)" />
+
+  <!-- Master Tilt: 25deg off vertical axis -->
+  <g transform="translate(250, 250) rotate(25)">
+
+    <!-- ================= BACK LAYER ================= -->
+
+    <!-- Distant Bottom Jet Cone & Beam -->
+    <polygon points="0,0 -12,185 12,185" fill="url(#bottomJet)" opacity="0.3" />
+    <line x1="0" y1="0" x2="0" y2="185" stroke="url(#bottomJet)" stroke-width="3" opacity="0.75" />
+
+    <!-- Equatorial Accretion Ring: Back Arc -->
+    <path d="M -155,0 A 155 35 0 0 1 155,0" fill="none" stroke="#38bdf8" stroke-width="2" stroke-dasharray="6 8" opacity="0.25" />
+
+    <!-- Back / Far Dipole Loops (Faded cyan) -->
+    <g opacity="0.25" transform="scale(0.85, 0.98) skewY(-8)">
+      <use href="#dipoleHalf" stroke="#00f2fe" />
+      <use href="#dipoleHalf" stroke="#38bdf8" transform="scale(-1, 1)" />
+    </g>
+
+    <!-- South Polar Entry Halo -->
+    <ellipse cx="0" cy="22" rx="14" ry="4" fill="none" stroke="#0284c7" opacity="0.4" />
+
+
+    <!-- ================= MID LAYER ================= -->
+
+    <!-- Main Dipole: Left Lobe (Deep Cyan) -->
+    <g opacity="0.65">
+      <use href="#dipoleHalf" stroke="#00f2fe" />
+    </g>
+
+    <!-- Main Dipole: Right Lobe (Bright Sky Blue) -->
+    <g opacity="0.65">
+      <use href="#dipoleHalf" stroke="#38bdf8" transform="scale(-1, 1)" />
+    </g>
+
+
+    <!-- ================= FOREGROUND LAYER ================= -->
+
+    <!-- Foreground Dipole Loops (Tilted forward with bright cyan / light blue) -->
+    <g opacity="0.9" transform="scale(1.08, 1.02) skewY(10)">
+      <use href="#dipoleHalf" stroke="#67e8f9" />
+      <use href="#dipoleHalf" stroke="#7dd3fc" transform="scale(-1, 1)" />
+    </g>
+
+    <!-- Equatorial Accretion Ring: Front Arc -->
+    <path d="M -155,0 A 155 35 0 0 0 155,0" fill="none" stroke="#67e8f9" stroke-width="2.5" opacity="0.7" />
+
+    <!-- 3D Shaded Neutron Core -->
+    <circle cx="0" cy="0" r="17" fill="#00f2fe" opacity="0.4" filter="url(#glow)" />
+    <circle cx="0" cy="0" r="11" fill="url(#coreSphere)" />
+
+    <!-- North Polar Exit Halo -->
+    <ellipse cx="0" cy="-20" rx="16" ry="5" fill="none" stroke="#67e8f9" stroke-width="1.8" opacity="0.85" />
+
+    <!-- Prominent Top Relativistic Jet -->
+    <polygon points="0,0 -22,-205 22,-205" fill="url(#topJet)" opacity="0.45" />
+    <line x1="0" y1="0" x2="0" y2="-205" stroke="url(#topJet)" stroke-width="5.5" filter="url(#glow)" />
+    <line x1="0" y1="0" x2="0" y2="-175" stroke="#ffffff" stroke-width="2" />
+  </g>
+</svg>
