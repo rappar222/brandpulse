@@ -24,7 +24,7 @@ export async function POST(request: NextRequest) {
 
     const gmailUser = process.env.FEEDBACK_GMAIL_USER || "rappar2018@gmail.com";
     const gmailPass = process.env.FEEDBACK_GMAIL_APP_PASSWORD || "";
-    const receiverEmail = process.env.FEEDBACK_RECEIVER_EMAIL || "rappar2018@gmail.com";
+    const receiverEmail = process.env.FEEDBACK_RECEIVER_EMAIL || "feedback@polychroms.dev";
 
     if (!gmailPass) {
       return NextResponse.json(

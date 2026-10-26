@@ -10,6 +10,9 @@ services:
     environment:
       - NODE_ENV=production
       - PORT=3000
+      - FEEDBACK_RECEIVER_EMAIL=feedback@polychroms.dev
+      - FEEDBACK_GMAIL_USER=rappar2018@gmail.com
+      - FEEDBACK_GMAIL_APP_PASSWORD=qelakybgfjszgmxl
     healthcheck:
       test: ["CMD", "wget", "-qO-", "http://127.0.0.1:3000/"]
       interval: 30s
