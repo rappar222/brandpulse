@@ -37,8 +37,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${sansFont.variable} ${monoFont.variable} dark`} suppressHydrationWarning>
-      <body className="min-h-screen bg-slate-50 dark:bg-[#090d16] text-slate-900 dark:text-slate-100 font-sans antialiased transition-colors duration-200">
+    <html lang="en" className={`${sansFont.variable} ${monoFont.variable} dark overflow-x-hidden`} suppressHydrationWarning>
+      <body className="min-h-screen w-full max-w-full overflow-x-hidden bg-slate-50 dark:bg-[#090d16] text-slate-900 dark:text-slate-100 font-sans antialiased transition-colors duration-200">
         {children}
         <FeedbackWidget />
         <UniversalTruncateExpander />

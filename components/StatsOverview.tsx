@@ -276,11 +276,11 @@ export function StatsOverview({
         </div>
 
         {/* Phone 4-Chip Filter Strip (All, Avail, Taken, Other) */}
-        <div className="flex items-center gap-1 overflow-x-auto no-scrollbar p-1 rounded-xl bg-slate-200/80 dark:bg-slate-800/80 border border-slate-300/80 dark:border-slate-700/60 text-center">
+        <div className="grid grid-cols-4 gap-1 p-1 rounded-xl bg-slate-200/80 dark:bg-slate-800/80 border border-slate-300/80 dark:border-slate-700/60 text-center w-full">
           <button
             type="button"
             onClick={() => onSelectStatusFilter("all")}
-            className={`flex-1 min-w-[70px] py-1.5 px-1.5 rounded-lg text-xs font-bold transition-all whitespace-nowrap ${
+            className={`py-1.5 px-1 rounded-lg text-xs font-bold transition-all truncate ${
               statusFilter === "all"
                 ? "bg-white dark:bg-slate-900 text-slate-900 dark:text-white shadow-2xs"
                 : "text-slate-600 dark:text-slate-400"
@@ -291,7 +291,7 @@ export function StatsOverview({
           <button
             type="button"
             onClick={() => onSelectStatusFilter("available")}
-            className={`flex-1 min-w-[80px] py-1.5 px-1.5 rounded-lg text-xs font-bold transition-all whitespace-nowrap ${
+            className={`py-1.5 px-1 rounded-lg text-xs font-bold transition-all truncate ${
               statusFilter === "available"
                 ? "bg-emerald-600 text-white shadow-2xs"
                 : "text-emerald-700 dark:text-emerald-400"
@@ -302,7 +302,7 @@ export function StatsOverview({
           <button
             type="button"
             onClick={() => onSelectStatusFilter("taken")}
-            className={`flex-1 min-w-[80px] py-1.5 px-1.5 rounded-lg text-xs font-bold transition-all whitespace-nowrap ${
+            className={`py-1.5 px-1 rounded-lg text-xs font-bold transition-all truncate ${
               statusFilter === "taken"
                 ? "bg-rose-600 text-white shadow-2xs"
                 : "text-rose-700 dark:text-rose-400"
@@ -313,7 +313,7 @@ export function StatsOverview({
           <button
             type="button"
             onClick={() => onSelectStatusFilter("unknown")}
-            className={`flex-1 min-w-[75px] py-1.5 px-1.5 rounded-lg text-xs font-bold transition-all whitespace-nowrap ${
+            className={`py-1.5 px-1 rounded-lg text-xs font-bold transition-all truncate ${
               statusFilter === "unknown"
                 ? "bg-amber-600 text-white shadow-2xs"
                 : "text-slate-600 dark:text-slate-400"
@@ -324,51 +324,53 @@ export function StatsOverview({
         </div>
 
         {/* Phone Horizontal Scrollable Category Bar (Swipeable, with Indicators) */}
-        <div className="flex items-center gap-1.5 overflow-x-auto no-scrollbar py-1 px-0.5 -mx-1 text-xs">
-          {categories.map((cat) => {
-            const isSelected = selectedCategory === cat;
-            const isWiki = cat === "Wikipedia";
-            const isTrademark = cat === "Trademark";
+        <div className="w-full max-w-full overflow-x-auto no-scrollbar py-1 px-1 -mx-1 text-xs">
+          <div className="inline-flex items-center gap-1.5 pr-8">
+            {categories.map((cat) => {
+              const isSelected = selectedCategory === cat;
+              const isWiki = cat === "Wikipedia";
+              const isTrademark = cat === "Trademark";
 
-            return (
-              <button
-                key={cat}
-                type="button"
-                onClick={() => onSelectCategory(cat)}
-                className={`flex-shrink-0 inline-flex items-center gap-1 px-3 py-1.5 rounded-xl font-bold transition-all whitespace-nowrap ${
-                  isSelected
-                    ? "bg-indigo-600 text-white shadow-xs"
-                    : "bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300"
-                }`}
-              >
-                {isWiki && (
-                  <Sparkles className={`w-3 h-3 ${isSelected ? "text-white" : "text-indigo-500"}`} />
-                )}
-                {isTrademark && (
-                  <Scale className={`w-3 h-3 ${isSelected ? "text-white" : "text-amber-500"}`} />
-                )}
-                <span>{getCategoryLabel(cat)}</span>
-                {isWiki && wikiFound !== undefined && wikiFound !== null && (
-                  <span
-                    className={`w-1.5 h-1.5 rounded-full ${
-                      wikiFound ? "bg-emerald-400" : "bg-slate-400"
-                    }`}
-                  />
-                )}
-                {isTrademark && trademarkRisk && (
-                  <span
-                    className={`w-1.5 h-1.5 rounded-full ${
-                      trademarkRisk === "High"
-                        ? "bg-rose-400"
-                        : trademarkRisk === "Medium"
-                        ? "bg-amber-400"
-                        : "bg-emerald-400"
-                    }`}
-                  />
-                )}
-              </button>
-            );
-          })}
+              return (
+                <button
+                  key={cat}
+                  type="button"
+                  onClick={() => onSelectCategory(cat)}
+                  className={`flex-shrink-0 inline-flex items-center gap-1 px-3 py-1.5 rounded-xl font-bold transition-all whitespace-nowrap ${
+                    isSelected
+                      ? "bg-indigo-600 text-white shadow-xs"
+                      : "bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300"
+                  }`}
+                >
+                  {isWiki && (
+                    <Sparkles className={`w-3 h-3 ${isSelected ? "text-white" : "text-indigo-500"}`} />
+                  )}
+                  {isTrademark && (
+                    <Scale className={`w-3 h-3 ${isSelected ? "text-white" : "text-amber-500"}`} />
+                  )}
+                  <span>{getCategoryLabel(cat)}</span>
+                  {isWiki && wikiFound !== undefined && wikiFound !== null && (
+                    <span
+                      className={`w-1.5 h-1.5 rounded-full ${
+                        wikiFound ? "bg-emerald-400" : "bg-slate-400"
+                      }`}
+                    />
+                  )}
+                  {isTrademark && trademarkRisk && (
+                    <span
+                      className={`w-1.5 h-1.5 rounded-full ${
+                        trademarkRisk === "High"
+                          ? "bg-rose-400"
+                          : trademarkRisk === "Medium"
+                          ? "bg-amber-400"
+                          : "bg-emerald-400"
+                      }`}
+                    />
+                  )}
+                </button>
+              );
+            })}
+          </div>
         </div>
 
         {/* Phone Persona & Actions Strip */}
